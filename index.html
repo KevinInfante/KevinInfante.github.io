@@ -50,6 +50,16 @@
                 <!-- Masthead Subheading-->
                 <p class="masthead-subheading font-weight-light mb-0">Software Developer
                      - Full Stack Web Developer - Programmer</p>
+                     <!-- Color Picker Rectangle -->
+                <div class="text-center">
+                    <div id="colorPickerContainer" class="color-picker-container mt-4">
+                        <button class="color-button active" data-color="#EB455F" style="background-color: #EB455F;"></button>
+                        <button class="color-button" data-color="#0000ff" style="background-color: #0000ff;"></button>
+                        <button class="color-button" data-color="#800080" style="background-color: #800080;"></button>
+                        <button class="color-button" data-color="#008000" style="background-color: #008000;"></button>
+                        <button class="color-button" data-color="#000000" style="background-color: #000000;"></button>
+                    </div>
+                    </div>
             </div>
         </header>
         <!-- About Section-->
@@ -68,13 +78,6 @@
                     <div class="col-lg-4 ms-auto"><p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
                     <div class="col-lg-4 me-auto"><p class="lead">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
                 </div>
-                <!-- About Section Button-->
-                <!-- <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
-                        <i class="fas fa-download me-2"></i>
-                        Free Download!
-                    </a>
-                </div> -->
             </div>
         </section>
         <!-- Portfolio Section-->
@@ -111,7 +114,55 @@
                     </div>
                 </div>
                 <!-- Repeat similar blocks for additional portfolio items -->
+
+                    <!-- Portfolio Card Item -->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="card portfolio-card">
+                        <div class="position-relative">
+                            <img src="assets/books_screen2.png" class="card-img-top portfolio-img" alt="Project Image">
+                            <!-- Hover Overlay -->
+                            <div class="overlay">
+                            <div class="overlay-buttons">
+                                <button class="btn btn-primary btn-view" data-bs-toggle="modal" data-bs-target="#portfolioModal1">View</button>
+                                <a href="https://books.kevins-site.com/" target="_blank" class="btn btn-secondary btn-visit">Visit</a>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- Card Body with Project Label -->
+                        <div class="card-body">
+                            <h5 class="card-title">Books</h5>
+                            <p class="card-text">A brief description of the project goes here.</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Card Item -->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="card portfolio-card">
+                        <div class="position-relative">
+                            <img src="assets/registry_screen.png" class="card-img-top portfolio-img" alt="Project Image">
+                            <!-- Hover Overlay -->
+                            <div class="overlay">
+                            <div class="overlay-buttons">
+                                <button class="btn btn-primary btn-view" data-bs-toggle="modal" data-bs-target="#portfolioModal1">View</button>
+                                <a href="https://github.com/KevinInfante/registry" target="_blank" class="btn btn-secondary btn-visit">Visit</a>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- Card Body with Project Label -->
+                        <div class="card-body">
+                            <h5 class="card-title">Registry</h5>
+                            <p class="card-text">A brief description of the project goes here.</p>
+                        </div>
+                        </div>
+                    </div>
+                    
+
+                    
+
+
                 
+                <div class="row justify-content-center">
                     <!-- Portfolio Card Item -->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="card portfolio-card">
@@ -132,7 +183,7 @@
                         </div>
                         </div>
                     </div>
-
+                    
                     <!-- Portfolio Card Item -->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="card portfolio-card">
@@ -153,13 +204,11 @@
                         </div>
                         </div>
                     </div>
+                    <!-- Repeat similar blocks for additional portfolio items -->
                     
-
-
+                       
+    
                 </div>
-
-
-
 
 
 
@@ -557,5 +606,39 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+            // Helper function to convert hex to "r, g, b" string.
+            function hexToRgb(hex) {
+              hex = hex.replace('#', '');
+              if (hex.length === 3) {
+                hex = hex.split('').map(ch => ch + ch).join('');
+              }
+              const bigint = parseInt(hex, 16);
+              const r = (bigint >> 16) & 255;
+              const g = (bigint >> 8) & 255;
+              const b = bigint & 255;
+              return `${r},${g},${b}`;
+            }
+          
+            // Wait for the document to load before attaching event listeners
+            document.addEventListener('DOMContentLoaded', function() {
+              const buttons = document.querySelectorAll('.color-button');
+              buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                  const chosenColor = this.getAttribute('data-color');  // e.g., "#ff0000"
+                  const chosenRgb = hexToRgb(chosenColor);               // e.g., "255,0,0"
+          
+                  // Update the CSS custom properties globally
+                  document.documentElement.style.setProperty('--bs-primary', chosenColor);
+                  document.documentElement.style.setProperty('--bs-primary-rgb', chosenRgb);
+          
+                  // Remove active class from all buttons, then add to the clicked one
+                  buttons.forEach(btn => btn.classList.remove('active'));
+                  this.classList.add('active');
+                });
+              });
+            });
+          </script>          
+          
     </body>
 </html>
