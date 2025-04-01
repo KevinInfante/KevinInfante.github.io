@@ -24,6 +24,9 @@
     - the hover works
   - changed #mainNav .navbar-nav > li.nav-item > a.nav-link.active (worked)
 
+  -the custom css at the bottom
+  - I'm changing every instance of #EB455F to --bs-primary, and every
+    instance of its rgb equivalent (235, 69, 95) to --bs-primary-rgb
  */
 
  
@@ -93,7 +96,7 @@
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
   /* --bs-link-color: #1abc9c; */
-  --bs-link-color: #EB455F;
+  --bs-link-color: var(--bs-primary);
   /* --bs-link-hover-color: #15967d; */
   --bs-link-hover-color: #cd2d45;
   --bs-code-color: #d63384;
@@ -3705,7 +3708,7 @@ textarea.form-control-lg {
   --bs-nav-pills-border-radius: 0.5rem;
   --bs-nav-pills-link-active-color: #fff;
   /* --bs-nav-pills-link-active-bg: #1abc9c; */
-  --bs-nav-pills-link-active-bg: #EB455F;
+  --bs-nav-pills-link-active-bg: var(--bs-primary);
 }
 .nav-pills .nav-link {
   background: none;
@@ -10914,6 +10917,7 @@ html {
 }
 
 #mainNav {
+  width: 100vw;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10930,14 +10934,14 @@ html {
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
   /* color: #1abc9c; */
-  color: #EB455F;
+  color: var(--bs-primary);
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
   color: #fff;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
   /* color: #1abc9c; */
-  color: #EB455F;
+  color: var(--bs-primary);
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -10960,12 +10964,12 @@ html {
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
     /* background: #1abc9c; */
-    background: #EB455F;
+    background: var(--bs-primary)
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
     /* background: #1abc9c; */
-    background:  #EB455F;
+    background:  var(--bs-primary);
   }
   #mainNav.navbar-shrink {
     padding-top: 0.5rem;
@@ -11036,7 +11040,7 @@ html {
   transition: all 0.2s ease-in-out;
   opacity: 0;
   /* background-color: rgba(26, 188, 156, 0.9); */
-  background-color: rgba(235, 69, 95, 0.9);
+  background-color: rgba(var(--bs-primary-rgb), 0.9);
 }
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
@@ -11047,7 +11051,7 @@ html {
 
 .portfolio-modal .btn-close {
   /* color: #1abc9c; */
-  color: #EB455F;
+  color: var(--bs-primary);
   font-size: 2rem;
   padding: 1rem;
 }
@@ -11129,6 +11133,12 @@ html {
   .contact-link {
     font-size: 2rem; /* Adjust as needed */
   }
+  /* Reduce font size on smaller screens, screens narrower than 475px */
+  @media (max-width: 475px) {
+    .contact-link {
+      font-size: 1.3rem; /* Adjust as needed */
+    }
+  }
     a.contact-link, 
     a.contact-link i {
     transition: color 0.25s ease !important;
@@ -11137,11 +11147,49 @@ html {
     /* Change the color to #EB455F on hover for both text and icons */
     a.contact-link:hover, 
     a.contact-link:hover i {
-    color: #EB455F !important;
+    color: var(--bs-primary) !important;
     }
   /* Ensure icon alignment by giving them a fixed width */
   /* .icon-fixed {
     width: 2.5rem; 
     text-align: center;
   } */
+
+  .color-picker-container {
+    display: inline-flex;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #bac4ce;
+    border-radius: 5px;
+  }
+  
+  .color-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 0;
+    background-clip: content-box;
+    outline: none;
+  }
+  
+  /* Hover effect: enlarge and add white outline */
+.color-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 3px #ffffff;
+}
+
+/* Active click effect: slight shrink */
+.color-button:active {
+  transform: scale(0.95);
+}
+
+/* Keep white outline on selected/active button */
+.color-button.active {
+  box-shadow: 0 0 0 3px #ffffff;
+}
+  
 /**********************************************************/ 
