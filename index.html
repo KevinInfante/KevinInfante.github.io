@@ -28,6 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#skills">Skills</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
                     </ul>
@@ -93,116 +94,137 @@
         <section class="page-section bg-primary text-white mb-0" id="skills">
             <div class="container">
             <!-- Skills section heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-white">Skills</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-white">
+                Skills
+            </h2>
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
-            <!-- First Row -->
+            <!-- Three Column Layout for Desktop -->
             <div class="row">
-                <!-- Programming Languages Card -->
-                <div class="col-md-6 mb-5">
-                <div class="card bg-light text-dark h-100">
-                    <div class="card-body">
-                    <h4 class="card-title text-center">
-                        <i class="fas fa-code"></i> Programming Languages
-                    </h4>
-                    <div class="row">
-                        <!-- Left column of list -->
-                        <div class="col-6 d-flex justify-content-center">
-                        <ul class="list-unstyled">
-                            <li>C/C++</li>
-                            <li>C#</li>
-                            <li>Java</li>
-                            <li>JavaScript</li>
-                        </ul>
-                        </div>
-                        <!-- Right column of list -->
-                        <div class="col-6 d-flex justify-content-center">
-                        <ul class="list-unstyled">
-                            <li>Python</li>
-                            <li>Swift</li>
-                            <li>Assembly</li>
-                            <li>SQL</li>
-                        </ul>
-                        </div>
-                    </div>
-                    </div>
+                <!-- Left Margin Icons (only on large screens) -->
+                <div class="col-lg-2 d-none d-lg-block">
+                <div class="text-center">
+                    <img src="https://img.icons8.com/?size=100&id=40669&format=png&color=000000" alt="C++" class="img-fluid mb-5">
+                    <img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="JavaScript" class="img-fluid mb-5">
+                    <img src="assets/reactLogo2.png" alt="React.js" width="100" class="img-fluid mb-5">
                 </div>
                 </div>
-                <!-- Web Development Card -->
-                <div class="col-md-6 mb-5">
-                <div class="card bg-light text-dark h-100">
-                    <div class="card-body">
-                    <h4 class="card-title text-center">
-                        <i class="fas fa-laptop-code"></i> Web Development
-                    </h4>
-                    <div class="row">
-                        <!-- Left column of list -->
-                        <div class="col-6 d-flex justify-content-center">
-                        <ul class="list-unstyled">
-                            <li>HTML &amp; CSS</li>
-                            <li>Bootstrap</li>
-                            <li>jQuery</li>
-                            <li>node.js</li>
-                        </ul>
+                <!-- Center Column: Skills Cards (2x2 grid) -->
+                <div class="col-lg-8">
+                <div class="row">
+                    <!-- Programming Languages Card -->
+                    <div class="col-md-6 mb-5">
+                    <div class="card bg-light text-dark h-100">
+                        <div class="card-body">
+                        <h4 class="card-title text-center">
+                            <i class="fas fa-code"></i> Programming Languages
+                        </h4>
+                        <div class="row">
+                            <!-- Left column of list -->
+                            <div class="col-6 d-flex justify-content-center">
+                            <ul class="list-unstyled">
+                                <li>C/C++</li>
+                                <li>C#</li>
+                                <li>Java</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            </div>
+                            <!-- Right column of list -->
+                            <div class="col-6 d-flex justify-content-center">
+                            <ul class="list-unstyled">
+                                <li>Python</li>
+                                <li>Swift</li>
+                                <li>Assembly</li>
+                                <li>SQL</li>
+                            </ul>
+                            </div>
                         </div>
-                        <!-- Right column of list -->
-                        <div class="col-6 d-flex justify-content-center">
-                        <ul class="list-unstyled">
-                            <li>express.js</li>
-                            <li>react.js</li>
-                            <li>ejs</li>
-                            <li>GitHub</li>
-                        </ul>
                         </div>
                     </div>
                     </div>
-                </div>
-                </div>
-            </div>
-            <!-- Second Row -->
-            <div class="row">
-                <!-- Databases & Cloud Card -->
-                <div class="col-md-6 mb-5">
-                <div class="card bg-light text-dark h-100">
-                    <div class="card-body">
-                    <h4 class="card-title text-center">
-                        <i class="fas fa-database"></i> Databases & Cloud
-                    </h4>
-                    <div class="d-flex justify-content-center">
-                        <ul class="list-unstyled">
-                        <li>MongoDB</li>
-                        <li>Postgres</li>
-                        <li>AWS</li>
-                        <li>Google Firebase</li>
-                        </ul>
+                    <!-- Web Development Card -->
+                    <div class="col-md-6 mb-5">
+                    <div class="card bg-light text-dark h-100">
+                        <div class="card-body">
+                        <h4 class="card-title text-center">
+                            <i class="fas fa-laptop-code"></i> Web Development
+                        </h4>
+                        <div class="row">
+                            <!-- Left column of list -->
+                            <div class="col-6 d-flex justify-content-center">
+                            <ul class="list-unstyled">
+                                <li>HTML &amp; CSS</li>
+                                <li>Bootstrap</li>
+                                <li>jQuery</li>
+                                <li>node.js</li>
+                            </ul>
+                            </div>
+                            <!-- Right column of list -->
+                            <div class="col-6 d-flex justify-content-center">
+                            <ul class="list-unstyled">
+                                <li>express.js</li>
+                                <li>react.js</li>
+                                <li>ejs</li>
+                                <li>GitHub</li>
+                            </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Databases & Cloud Card -->
+                    <div class="col-md-6 mb-5">
+                    <div class="card bg-light text-dark h-100">
+                        <div class="card-body">
+                        <h4 class="card-title text-center">
+                            <i class="fas fa-database"></i> Databases & Cloud
+                        </h4>
+                        <div class="d-flex justify-content-center">
+                            <ul class="list-unstyled">
+                            <li>MongoDB</li>
+                            <li>Postgres</li>
+                            <li>AWS</li>
+                            <li>Google Firebase</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Machine Learning & Data Card -->
+                    <div class="col-md-6 mb-5">
+                    <div class="card bg-light text-dark h-100">
+                        <div class="card-body">
+                        <h4 class="card-title text-center">
+                            <i class="fas fa-robot"></i> Machine Learning & Data
+                        </h4>
+                        <div class="d-flex justify-content-center">
+                            <ul class="list-unstyled">
+                            <li>pandas</li>
+                            <li>sklearn</li>
+                            <li>matplotlib</li>
+                            </ul>
+                        </div>
+                        </div>
                     </div>
                     </div>
                 </div>
                 </div>
-                <!-- Machine Learning & Data Card -->
-                <div class="col-md-6 mb-5">
-                <div class="card bg-light text-dark h-100">
-                    <div class="card-body">
-                    <h4 class="card-title text-center">
-                        <i class="fas fa-robot"></i> Machine Learning & Data
-                    </h4>
-                    <div class="d-flex justify-content-center">
-                        <ul class="list-unstyled">
-                        <li>pandas</li>
-                        <li>sklearn</li>
-                        <li>matplotlib</li>
-                        </ul>
-                    </div>
-                    </div>
+                <!-- Right Margin Icons (only on large screens) -->
+                <div class="col-lg-2 d-none d-lg-block">
+                <div class="text-center">
+                    <img src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" alt="Python" class="img-fluid mb-5">
+                    <img src="https://img.icons8.com/?size=100&id=24465&format=png&color=000000" alt="Swift" class="img-fluid mb-5">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" width="100" alt="Postgres" class="img-fluid mb-5">
                 </div>
                 </div>
             </div>
             </div>
         </section>
+  
   
   
         <!-- Portfolio Section-->
@@ -508,7 +530,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                <img src="assets/registry_screen.png" class="img-fluid mb-3" alt="Project Image">
+                <img src="assets/registry_gif.gif" class="img-fluid mb-3" alt="Project Image">
                 <p>A registry website I created for a client. When the user registers a person, they are added to a database 
                     which can then be searched and filtered. </p>
                 </div>
