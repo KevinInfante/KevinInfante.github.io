@@ -27,6 +27,7 @@
   -the custom css at the bottom
   - I'm changing every instance of #EB455F to --bs-primary, and every
     instance of its rgb equivalent (235, 69, 95) to --bs-primary-rgb
+  -changed -btn-primary
  */
 
  
@@ -2870,19 +2871,18 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #1abc9c;
-  --bs-btn-border-color: #1abc9c;
+  /* --bs-btn-bg: #1abc9c; */
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #16a085;
-  --bs-btn-hover-border-color: #15967d;
-  --bs-btn-focus-shadow-rgb: 60, 198, 171;
+  --bs-btn-hover-bg: color-mix(in srgb, var(--bs-primary) 80%, black);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-primary) 70%, black);
+  --bs-btn-focus-shadow-rgb: 60, 198, 171; /* This needs manual conversion */
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #15967d;
-  --bs-btn-active-border-color: #148d75;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #1abc9c;
-  --bs-btn-disabled-border-color: #1abc9c;
+  --bs-btn-active-bg: color-mix(in srgb, var(--bs-primary) 70%, black);
+  --bs-btn-active-border-color: color-mix(in srgb, var(--bs-primary) 60%, #fff);
+  --bs-btn-disabled-bg: var(--bs-primary);
+  --bs-btn-disabled-border-color: var(--bs-primary);
 }
 
 .btn-secondary {
